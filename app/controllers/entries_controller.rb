@@ -4,7 +4,7 @@ class EntriesController < ApplicationController
   def index
       #@user_followers =current_user.followers
       #@entries = @user_followers[0].entries.paginate(page: params[:page]) 
-       @entries = Entry.order("created_at DESC").limit(3).page(params[:page])
+       @entries = Entry.order("created_at DESC").limit(10).page(params[:page])
   end
 
   def show
